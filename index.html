@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goal Tracker</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./goal-tracker-images/goal.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+  <nav class="navbarm">
+    <div class="left">
+        <h1>Goal Tracker</h1>
+    </div>
+    <div class="right">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#notesp">Add Notes</a></li>
+            <li><a href="#blogp">Blog</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="./Contact-form-main/">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+  <div class="title">Goal Tracker</div>
+  <div class="container">
+    <h1 id="addtask">Goal Tracker</h1>
+    <form id="goal-form">
+      <label for="goal" class="name">Goal:</label>
+      <input type="text" id="goal" class="iptext" name="goal" placeholder="Add your Goal here...">
+      <label for="target-date" class="name">Target Date:</label>
+      <input type="date"  id="target-date" class="iptext" name="target-date">
+      <input id="speech" type="submit" value="Add Goal">
+    </form>
+    <div id="chart-container">
+      <div id="goalchart">Goal Chart</div>
+      <hr>
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="table-container">
+      <table>
+        <thead class="tb">
+          <tr>
+            <th>Goal</th>
+            <th>Target Date</th>
+            <th>Days Remaining</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- add note -->
+<div class="containero" id="notesp">
+    <h1 class="headingo">Add on Note </h1>
+    <hr>
+    <div class="inputo">
+        <div class="card-bodyo">
+            <h2 class="card-titleo">Add Notes</h2>
+            <div>
+                <textarea class="form-controlo" rows="5" id="addTxto"></textarea>
+            </div>
+            <button href="#" class="primary-btno" id="addBtno">Add Note</button>
+        </div>
+    </div>
+
+    <h1 class="notes-headingo">Your Notes</h1>
+    <hr>
+    <div id="noteso" class="output-containero"> </div>
+</div>
+<hr>
+<!-- blog -->
+<h2 class="headingp">Content</h2>
+<div class="blog" id="blogp">
+  <div class="card-item">
+      <div class="image image1"></div>
+      <div class="content">
+          <h1 class="titleo"> How to achieve your goals? </h1>
+          <p>You can achieve your goals by adding them and keeping the progress.. </p>
+          <br>
+          <a href="#" target="_blank" class="buttonx">Read More</a>
+      </div>
+  </div>
+
+  <div class="card-item">
+      <div class="image image2"></div>
+      <div class="content">
+          <h1 class="titleo"> How to set your goals? </h1>
+          <p>Goal-setting is important as it helps you reach greater success and satisfaction in every aspect..</p>
+          <br>
+          <a href="#" target="_blank" class="buttonx">Read More</a>
+      </div>
+  </div>
+
+  <div class="card-item">
+      <div class="image image3"></div>
+      <div class="content">
+          <h1 class="titleo"> What is Goal Tracker?</h1>
+          <p>Goal tracker is a web based application which keeps track of your own goals..</p>
+          <br>
+          <a href="#" target="_blank" class="buttonx">Read More</a>
+      </div>
+  </div>
+
+  <div class="card-item">
+      <div class="image image4"></div>
+      <div class="content">
+          <h1 class="titleo"> How to keep your progress?</h1>
+          <p> Learn about measuring your progress while working to achieve goals..</p>
+          <br>
+          <a href="#" target="_blank" class="buttonx">Read More</a>
+      </div>
+  </div>
+</div>
+
+</div>
+<hr>
+<!-- reviews section -->
+<div class="main-container">
+ <h2 class="headingp">Reviews</h2>
+  <div class="cards">
+      <div class="card card1">
+          <div>
+              <ul>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+          </div>
+          <p class="close"><i class="fa-solid fa-xmark"></i></p>
+          <p class="desc">Wonderful application for tracking goals</p>
+          <p class="read-more">
+              <a class="readMore" href="#">Read More <i class="fas fa-arrow-right"></i></a>
+          </p>
+      </div>
+
+      <div class="card card2">
+          <div>
+              <ul>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+          </div>
+          <p class="close"><i class="fa-solid fa-xmark"></i></p>
+          <p class="desc"> Useful application for students to make the list of tasks to be completed</p>
+          <p class="read-more">
+              <a class="readMore" href="#">Read More <i class="fas fa-arrow-right"></i></a>
+          </p>
+      </div>
+
+      <div class="card card3">
+          <div>
+              <ul>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+          </div>
+          <p class="close"><i class="fa-solid fa-xmark"></i></p>
+          <p class="desc">Best website to keep the progress of your works</p>
+          <p class="read-more">
+              <a class="readMore" href="#">Read More <i class="fas fa-arrow-right"></i></a>
+          </p>
+      </div>
+      
+      <div class="card card4">
+          <div>
+              <ul>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+                  <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+          </div>
+          <p class="close"><i class="fa-solid fa-xmark"></i></p>
+          <p class="desc">best application for tracking your tasks and to make a note</p>
+          <p class="read-more">
+              <a class="readMore" href="#">Read More <i class="fas fa-arrow-right"></i></a>
+          </p>
+      </div>
+  </div>
+</div>
+<!-- services -->
+<hr>
+<section id="services">
+  <h2 class="headingp"> Services </h2>
+  <div class="services-container">
+      <div class="service-item">
+          <ul>
+              <li><i class="fa-solid fa-desktop"></i></li>
+          </ul>
+          <article>
+              <h2 class="service-heading"> Add goals </h2>
+              <p> you can simply add your tasks and goals by mentioning your goals </p>
+          </article>
+      </div>
+      <div class="service-item">
+        <ul>
+            <li><i class="fa fa-calendar"></i></li>
+        </ul>
+        <article>
+            <h2 class="service-heading">set deadline </h2>
+            <p>By setting the deadline you can track the no of days remaining to complete the task</p>
+        </article>
+    </div>
+    <div class="service-item">
+      <ul>
+          <li><i class="fa fa-table"></i></li>
+      </ul>
+      <article>
+          <h2 class="service-heading">tabulated data </h2>
+          <p>You can view your tasks in the tabular form </p>
+      </article>
+  </div>
+  <div class="service-item">
+    <ul>
+        <li><i class="fas fa-edit"></i></li>
+    </ul>
+    <article>
+        <h2 class="service-heading">Update goals </h2>
+        <p>You can edit or remove the previously added tasks from the tabular form</p>
+    </article>
+</div>
+      <div class="service-item">
+          <ul>
+              <li><i class="fa-solid fa-chart-line"></i></li>
+          </ul>
+          <article>
+              <h2 class="service-heading"> Tracking </h2>
+              <p>You can keep the track of your goals by analyzing the no of days left to complete the task in the form of bar graph</p>
+          </article>
+      </div>
+      <div class="service-item">
+          <ul>
+              <li><i class="fa fa-book"></i></li>
+          </ul>
+          <article>
+              <h2 class="service-heading"> Add a Note </h2>
+              <p>You can also add important or remainder notes in a add a note section like a to-do list</p>
+          </article>
+      </div>
+      </div>
+      </section>
+      
+<!-- Footer -->
+<footer class="footer">
+  <h2 class="website-heading"> Goal Tracker </h2>
+  <div class="footer-item">
+      <h2 class="footer-heading"> Company </h2>
+      <ul>
+          <li> About Us </li>
+          <li> Contact Us </li>
+          <li> Careers </li>
+          <li> Privacy Policy </li>
+          <li> Work with Us </li>
+      </ul>
+  </div>
+  <div class="footer-item">
+      <h2 class="footer-heading"> Resources </h2>
+      <ul>
+          <li> Application</li>
+          <li> Documentation</li>
+          <li> Services</li>
+          <li> Buy us a Coffee</li>
+          <li> FAQs</li>
+      </ul>
+  </div>
+  <div class="footer-item">
+      <h2 class="footer-heading"> Features </h2>
+      <ul>
+          <li> Add Goal </li>
+          <li> Track Goal</li>
+          <li> Add Notes </li>
+          <li> Blog</li>
+          <li> Reviews </li>
+          
+      </ul>
+  </div>
+  <div class="footer-item">
+      <h2 class="footer-heading"> Social</h2>
+      <ul>
+          <li> facebook </li>
+          <li> Instagram </li>
+          <li> Twitter </li>
+          <li> Linkidln </li>
+          <li> Telegram </li>
+      </ul>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
