@@ -75,6 +75,9 @@ goalForm.addEventListener('submit', (e) => {
     goalCell.textContent = goalObj.goal;
     targetDateCell.textContent = goalObj.targetDate;
     daysRemainingCell.textContent = goalObj.daysRemaining;
+    if (daysRemaining!=null){
+	alert("the no of days allocated to complete the task "+ goal+" are "+daysRemaining);
+}
 
     // Add edit and remove buttons
     const editButton = document.createElement('button');
